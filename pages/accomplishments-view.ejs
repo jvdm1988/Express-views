@@ -1,0 +1,35 @@
+
+
+        <h1> Class accomplishments</h1>
+
+        <section class="featured-accomp">
+          <h2> <%= featuredAccomplishment.award %></h2>
+
+          <% if (featuredAccomplishment.person === "Kevin") { %>
+            <p> Not to exclude other TAs Like Ariel,
+                but Kevin has been awarded <i> <%= featuredAccomplishment.award %> </i>
+              </p>
+          <% } else { %>
+
+          <p> Put the spotlight on <b> <%= featuredAccomplishment.person %> </b> for being awarded
+            <i> <%= featuredAccomplishment.award %></h2>
+          </p>
+          <%  } %>
+        </section>
+
+        <ul>
+          <% accomplishmentsForView.forEach((oneAccomp) => { %>
+            <li>
+            <h2><%= oneAccomp.award %></h2>
+            <p> Awarded to: <b><%= oneAccomp.person %></b></p>
+            <% oneAccomp %>
+            </li>
+        <%  }) %>
+        </ul>
+
+      <ul>
+        <li>
+          <h2>oneAccomp.award</h2>
+          <p> Awarded to: <b> oneAccomp.person </b></p>
+        </li>
+      </ul>

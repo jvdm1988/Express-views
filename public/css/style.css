@@ -1,0 +1,19 @@
+.red {
+  background-color: red;
+}
+
+.black {
+  background-color: orange;
+}
+
+.featured-accomp {
+  background-color: orange;
+  color: white;
+  padding: 25px;
+  border-radius: 3px;
+}
+
+.featured-accomp i {
+  font-size: 20px;
+
+}
