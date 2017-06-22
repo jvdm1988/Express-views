@@ -17,8 +17,14 @@ app.use(express.static("public"));
 app.use(expressLayouts);
 
 // tells Express that our layout file is "pages/my-master-layout.ejs"
-// just like views, layout is the default 
+// just like views, layout is the default
 app.set("layout", "my-master-layout.ejs");
+
+
+// Default values for view variables ------------------------
+app.locals.myTitle = "Express Views";
+
+app.locals.myBodyClass = "normal-body";
 
 // ROUTES GO HERE -------------------------------------------
 
@@ -68,7 +74,9 @@ app.get("/accomplishments", (req, res, next) => {
   const randomIndex = Math.floor(Math.random() * accomplishmentsList.length);
   res.render("accomplishments-view.ejs", {
     accomplishmentsForView: accomplishmentsList,
-    featuredAccomplishment: accomplishmentsList[randomIndex]
+    featuredAccomplishment: accomplishmentsList[randomIndex],
+    myTitle: "Accomplishments - Express Views"
+      // OPTIONAL: The myTitle variable in the layout is optional
   });
 });
 
